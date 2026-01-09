@@ -1,0 +1,83 @@
+@media (max-width: 600px) {
+    #menu-button { display: block; }
+    nav ul { display: none; flex-direction: column; width: 100%; position: absolute; top: 60px; left: 0; background: var(--primary-color); }
+    nav ul.open { display: flex; }
+}
+
+/* Main Layout */
+main { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 1rem;
+ }
+
+.top-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    border: 1px solid #ddd; 
+    padding: 1rem;
+    margin-bottom: 1rem;
+ }
+
+.profile-photo {
+    width: 100%;
+    max-width: 200px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* Cursos */
+/* Contenedor Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* style card */
+.course-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+
+.course-card.completed {
+    background-color: #4b5d67;
+    color: white;
+    border-color: #2c3e50;
+}
+
+/*filter buttons*/
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: #555;
+}
