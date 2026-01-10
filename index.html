@@ -11,14 +11,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="">
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/home-page.css">
   <link rel="stylesheet" href="styles/home-pagelarge.css">
+  <script src="scripts/home-page.js" defer></script>
 </head>
 
 <body>
@@ -28,16 +28,17 @@
       <span>Cindy Cruz</span>
     </div>
     <button id="ham-btn" class="hamburger"></button>
-    <nav id="nav-bar" class="navigation">
-      <ul id="nav-list">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="wdd231/chamber-project.html">Chamber Project</a></li>
-        <li><a href="wdd231/final-project.html">Final Project</a></li>
-      </ul>
-    </nav>
   </header>
+  <nav id="nav-bar" class="navigation">
+    <ul id="nav-list">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="wdd231/chamber-project.html">Chamber Project</a></li>
+      <li><a href="wdd231/final-project.html">Final Project</a></li>
+    </ul>
+  </nav>
   <main>
     <h1>Home</h1>
+
     <div class="top-grid">
       <section class="card">
         <h2>About Me</h2>
@@ -48,43 +49,33 @@
           drawing, and I love spending time with her. I like to study and learn new things.</p>
       </section>
 
+
       <section class="card">
         <h2>Student Photo</h2>
         <img src="images/me.webp" alt="profile picture-cindy" class="profile-photo">
       </section>
     </div>
-    </section>
-    </div>
-    </section>
 
-    <section>
-      <h2>Chamber Proyect</h2>
-      <p>Details about recent changes to the site.</p>
-    </section>
-
-    <section>
-      <h2>Final Project</h2>
-      <p>Links or materials used during the course.</p>
-    </section>
     <section class="courses-section">
       <h2>Web Certificate Courses</h2>
       <div class="filter-buttons">
-        <button id="all-btn">All</button>
-        <button id="cse-btn">CSE</button>
-        <button id="wdd-btn">WDD</button>
-      </div>
-      <div id="course-container" class="course-grid">
+        <button id="all-btn">All Courses</button>
+        <button id="cse-btn">CSE Courses</button>
+        <button id="wdd-btn">WDD Courses</button>
       </div>
       <p id="total-credits">Total Credits: 0</p>
+      <div id="course-container" class="course-grid">
+      </div>
     </section>
   </main>
   <footer>
     <div class="social">
-      <a href="" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+      <a href="https://www.instagram.com/ecindycruz?igsh=ZjVqc3ZnOXE0Yndk" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
       <a href="" target="_blank"><img src="images/whatsapp.svg" alt="whatsApp" width="16" height="16"></a>
-      <a href="" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
-      <a href="" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+      <a href="https://github.com/ecindycruz-cmyk" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
     </div>
+    <p>Today is: <span id="today1"></span></p>
     <p>
       &copy; <span id="currentyear"></span> Cindy Cruz | El Salvador
     </p>

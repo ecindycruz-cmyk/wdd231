@@ -1,83 +1,66 @@
 @media (max-width: 600px) {
-    #menu-button { display: block; }
-    nav ul { display: none; flex-direction: column; width: 100%; position: absolute; top: 60px; left: 0; background: var(--primary-color); }
-    nav ul.open { display: flex; }
-}
+    .hamburger { display: block; }
+    
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+    }
 
-/* Main Layout */
-main { 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 1rem;
- }
+    .navigation ul.show { display: flex; }
+    
+    .navigation li a { text-align: center; border-bottom: 1px solid #444; }
 
-.top-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-}
-
-.card {
-    border: 1px solid #ddd; 
-    padding: 1rem;
-    margin-bottom: 1rem;
- }
-
-.profile-photo {
-    width: 100%;
-    max-width: 200px; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-}
-
-/* Cursos */
-/* Contenedor Grid */
+/* Course Grid & Cards */
 .course-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
-/* style card */
 .course-card {
-    background-color: #f0f0f0;
+    background-color: var(--pending-color);
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.3s ease; /* Efecto suave */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .course-card:hover {
-    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-
 
 .course-card.completed {
-    background-color: #4b5d67;
+    background-color: var(--completed-color);
     color: white;
-    border-color: #2c3e50;
 }
 
-/*filter buttons*/
+/* Filter Buttons */
 .filter-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .filter-buttons button {
     padding: 10px 25px;
-    background-color: #333;
-    color: white;
-    border: none;
     cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    transition: 0.3s;
 }
 
-.filter-buttons button:hover {
-    background-color: #555;
+.filter-buttons button.active {
+    background-color: var(--accent-color);
+}    
 }
