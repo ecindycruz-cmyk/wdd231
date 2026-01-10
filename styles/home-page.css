@@ -182,11 +182,12 @@ footer {
 }
 
 footer p {
-    color: rgb(221, 221, 221);
+    color: white;
 }
 
 footer span {
     font-size: 1rem;
+    color:  white;
 }
 
 .social {
