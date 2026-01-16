@@ -1,0 +1,28 @@
+{
+  "family_name": "García López",
+  "move_in_date": "2025-11-15",
+  "family_size": 4,
+  "visited_by_bishopric": true,
+  "members": [
+    {
+      "name": "Juan García",
+      "gender": "Male",
+      "birthdate": "1985-05-20"
+    },
+    {
+      "name": "María López",
+      "gender": "Female",
+      "birthdate": "1987-08-12"
+    },
+    {
+      "name": "Carlos García",
+      "gender": "Male",
+      "birthdate": "2012-03-25"
+    },
+    {
+      "name": "Sofía García",
+      "gender": "Female",
+      "birthdate": "2015-12-02"
+    }
+  ]
+}
