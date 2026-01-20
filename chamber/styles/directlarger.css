@@ -1,67 +1,65 @@
-#menu-btn {
-    display: none; 
-}
+/* Tablet & Desktop view */
+@media (min-width: 768px) {
+    #menu-btn {
+        display: none; 
+    }
 
-#nav-menu {
-    display: flex;
-    justify-content: flex-end;
-    gap: 25px;
-    width: auto;
-    position: static;
-    background-color: transparent;
-}
+    #nav-menu {
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+        width: auto;
+        position: static;
+        background-color: transparent;
+    }
 
-#nav-menu li a {
-    padding: 10px 5px;
-    font-size: 1rem;
-}
+    #nav-menu li a {
+        padding: 10px 5px;
+        font-size: 1rem;
+    }
 
-.grid-view {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 40px auto;
-}
+    .grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 40px auto;
+    }
 
-.list-view {
-    max-width: 1100px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-}
+    .list-view {
+        max-width: 1100px;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+    }
 
-.list-view section {
-    display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
-    align-items: center;
-    padding: 15px 25px;
-    background-color: #fff;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    min-height: auto;
-}
+    .list-view section {
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+        align-items: center;
+        padding: 15px 25px;
+        background-color: #ffffff;
+        border: none;
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        min-height: auto;
+    }
 
-.list-view section:nth-child(even) {
-    background-color: #f2f2f2;
-}
+    .list-view section:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-.list-view h3 {
-    font-size: 1.1rem;
-    margin: 0;
-    color: #4b3030;
-}
+    .list-view h3 {
+        font-size: 1.1rem;
+        margin: 0;
+        color: #4b3030;
+    }
 
-.list-view p {
-    margin: 0;
-    font-size: 0.95rem;
-}
+    .list-view p {
+        margin: 0;
+        font-size: 0.95rem;
+    }
 
-.list-view .level {
-    font-weight: bold;
-    color: #7a6060;
-}
-
-.list-view img {
-    display: none;
+    .list-view .level {
+        font-weight: bold;
+        color: #7a6060;
+    }
 }

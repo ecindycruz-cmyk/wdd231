@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
-    color: #333;
+    color: #333333;
     background-color: #e0e0db;
 }
 
@@ -29,7 +29,7 @@ header {
 #nav-menu {
     list-style: none;
     padding: 0;
-    display: none; 
+    display: none; /* Hidden on mobile */
 }
 
 #nav-menu.show {
@@ -44,7 +44,7 @@ header {
 }
 
 #nav-menu li a {
-    color: white;
+    color: #ffffff;
     padding: 10px 20px;
     text-decoration: none;
     text-align: right;
@@ -59,8 +59,9 @@ header {
     font-size: 2rem;
     background: none;
     border: none;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
+    display: block; /* Visible on mobile */
 }
 
 /* Controls */
@@ -79,7 +80,7 @@ header {
 
 .menu-controls button.active {
     background-color: #003366;
-    color: white;
+    color: #ffffff;
 }
 
 /* Grid View (Mobile First) */
@@ -107,24 +108,26 @@ header {
     height: 150px; 
     object-fit: contain;
     margin-bottom: 15px;
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* List View (Mobile) */
 .list-view section {
     padding: 15px;
-    border-bottom: 1px solid #ccc;
-    background: white;
+    border-bottom: 1px solid #cccccc;
+    background-color: #ffffff;
 }
 
-.list-view img { display: none; }
+.list-view img { 
+    display: none; 
+}
 
 /* Footer */
 footer {
     padding: 2rem;
     background-color: #4b3030;
-    color: white;
+    color: #ffffff;
     text-align: center;
     margin-top: 20px;
 }
