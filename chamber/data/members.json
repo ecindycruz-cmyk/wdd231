@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Super Selectos",
+      "address": "Calle El Jabalí, San Salvador",
+      "phone": "+503 2267-3333",
+      "website": "https://www.superselectos.com",
+      "image": "selectos.webp",
+      "membershipLevel": 3,
+      "other": "Líder en retail de alimentos."
+    },
+    {
+      "name": "La Constancia",
+      "address": "Paseo Gral. Escalón, San Salvador",
+      "phone": "+503 2209-2000",
+      "website": "https://www.laconstancia.com",
+      "image": "constancia.webp",
+      "membershipLevel": 3,
+      "other": "Empresa de bebidas líder."
+    },
+    {
+      "name": "Tigo El Salvador",
+      "address": "Vía del Corso, Tuscania",
+      "phone": "+503 2508-0000",
+      "website": "https://www.tigo.com.sv",
+      "image": "tigo.webp",
+      "membershipLevel": 2,
+      "other": "Servicios de telecomunicaciones."
+    },
+    {
+      "name": "Banco Agrícola",
+      "address": "85 Av. Sur, San Salvador",
+      "phone": "+503 2210-0000",
+      "website": "https://www.bancoagricola.com",
+      "image": "agricola.webp",
+      "membershipLevel": 3,
+      "other": "El banco más grande del país."
+    },
+    {
+      "name": "Avianca",
+      "address": "Centro de Gobierno, San Salvador",
+      "phone": "+503 2267-0222",
+      "website": "https://www.avianca.com",
+      "image": "avianca.webp",
+      "membershipLevel": 3,
+      "other": "Línea aérea con Hub principal en El Salvador."
+    },
+    {
+      "name": "Termoencogibles",
+      "address": "Antiguo Cuscatlán",
+      "phone": "+503 2212-7700",
+      "website": "https://www.termo.com.sv",
+      "image": "termo.webp",
+      "membershipLevel": 2,
+      "other": "Soluciones de empaque sostenible."
+    },
+    {
+      "name": "Pupusería El Abuelo",
+      "address": "Olocuilta, La Paz",
+      "phone": "+503 2330-1122",
+      "website": "https://facebook.com/elabuelo",
+      "image": "abuelo.webp",
+      "membershipLevel": 1,
+      "other": "Comida tradicional salvadoreña."
+    }
+  ]
+}

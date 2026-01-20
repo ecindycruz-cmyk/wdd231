@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Directory | El Salvador Chamber of Commerce</title>
+    <meta name="description" content="Official directory of Chamber of Commerce members. Find the best companies in El Salvador.">
+    <meta name="author" content="Cindy Cruz">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Member Directory - Chamber of Commerce SV">
+    <meta property="og:description" content="Explore our network of partner companies in El Salvador.">
+    <meta property="og:image" content="https://tu-repo.github.io/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://tu-repo.github.io/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directshort.css">
+    <link rel="stylesheet" href="styles/directlarger.css" media="(min-width: 600px)">
+    
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="Zakura Logo" width="50" height="50" loading="eager">
+            </div>
+            <h1>Zakura Chamber of Commerce</h1>
+            <nav>
+                <button id="menu-btn" aria-label="Open Menu">≡</button>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-controls">
+            <button id="grid" title="Grid View">Grid View</button>
+            <button id="list" title="List View">List View</button>
+        </div>
+        <article id="members-container" class="grid-view">
+            </article>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Cindy Cruz | WDD 231</p>
+        <p>San Salvador, El Salvador | info@camara.com.sv</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
