@@ -59,6 +59,7 @@ header {
 
 #nav-menu.show { display: flex; }
 
+
 #nav-menu li a {
     color: white;
     text-decoration: none;
@@ -83,17 +84,23 @@ header {
     #nav-menu { display: flex; position: static; flex-direction: row; background: none; }
     #nav-menu li a { border: none; }
     .join-grid { grid-template-columns: 2fr 1fr; }
+     #nav-menu li a:hover {
+    color: var(--accent-color);
+  }
 }
 
 /* --- FORM & CARDS --- */
 fieldset { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; }
-label { display: block; margin-bottom: 1rem; font-weight: bold; }
+label { display: block; margin-bottom: 1rem; font-weight: bold; color: var(--primary-color);}
 input, select, textarea {
+    display: block;
     width: 100%;
     padding: 0.8rem;
     margin-top: 0.3rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: inherit;
+
 }
 
 .m-card {

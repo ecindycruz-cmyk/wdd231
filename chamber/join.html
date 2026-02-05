@@ -49,32 +49,44 @@
       <section class="form-container">
         <h2>Membership Application</h2>
         <form method="get" action="thankyou.html" class="wf1">
-          <fieldset>
-            <label>First Name * <input type="text" name="fname" required autocomplete="given-name"></label>
-            <label>Last Name * <input type="text" name="lname" required autocomplete="family-name"></label>
-            <label>Organizational Title <input type="text" name="org-title" pattern="[A-Za-z\s-]{7,}" required title="Minimum 7 characters."></label>
-            <label>Email * <input type="email" name="email" required placeholder="name@example.com"></label>
-            <label>Mobile Phone * <input type="tel" name="phone" required></label>
-            <label>Business / Organization Name * <input type="text" name="organization" required></label>
+  <fieldset>
+    <label>First Name * <input type="text" name="fname" required autocomplete="given-name" title="Please enter your first name.">
+    </label>
 
-            <label>Membership Level *
-              <select name="membership" required>
-                <option value="" selected disabled>Select a level</option>
-                <option value="np">NP Membership</option>
-                <option value="bronze">Bronze Membership</option>
-                <option value="silver">Silver Membership</option>
-                <option value="gold">Gold Membership</option>
-              </select>
-            </label>
+    <label>Last Name * <input type="text" name="lname" required autocomplete="family-name" title="Please enter your last name.">
+    </label>
 
-            <label>Business Description
-              <textarea name="description" placeholder="What does your organization do?"></textarea>
-            </label>
+    <label>Organization Title
+      <input type="text" name="org-title" pattern="[A-Za-z\s-]{7,}" required autocomplete="organization-title" title="Enter your job title (minimum 7 characters).">
+    </label>
 
-            <input type="hidden" name="timestamp" id="timestamp">
-            <input type="submit" value="Submit Application" class="btn-submit">
-          </fieldset>
-        </form>
+    <label>Email Address * <input type="email" name="email" required placeholder="name@example.com" autocomplete="email" title="Please enter a valid email address.">
+    </label>
+
+    <label>Mobile Phone * <input type="tel" name="phone" required autocomplete="tel" title="Please enter your telephone number.">
+    </label>
+
+    <label>Organization Name * <input type="text" name="organization" required autocomplete="organization" title="Please enter your company or organization name.">
+    </label>
+
+    <label>Membership Level *
+      <select name="membership" required title="Please select a membership level from the list.">
+        <option value="" selected disabled>Select a level</option>
+        <option value="np">NP Membership</option>
+        <option value="bronze">Bronze Membership</option>
+        <option value="silver">Silver Membership</option>
+        <option value="gold">Gold Membership</option>
+      </select>
+    </label>
+
+    <label>Organization Description
+      <textarea name="description" title="Provide a brief description of your organization."></textarea>
+    </label>
+
+    <input type="hidden" name="timestamp" id="timestamp">
+    <input type="submit" value="Submit Application" class="btn-submit">
+  </fieldset>
+</form>
       </section>
 
       <aside class="membership-levels">
