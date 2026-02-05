@@ -1,0 +1,219 @@
+/* BACKGROUND AND FONTS */
+:root {
+  --primary-color: #352222;
+  --secondary-color: #554444;
+  --accent-color: #ffcc00;
+  --text-color: #222222;
+  --bg-color: #f4f4f2;
+  --card-bg: #ffffff;
+  --link-color: #1a4a8e;
+  --transition: all 0.3s ease;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- HEADER & NAV --- */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+h1 {
+  font-size: 1rem;
+  margin: 0;
+  flex: 1;
+  padding: 0 10px;
+}
+
+#menu-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#nav-menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+}
+
+#nav-menu.show {
+  display: flex;
+}
+
+#nav-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#nav-menu li a.active {
+  background-color: var(--accent-color);
+  color: black;
+}
+
+/* --- GRID --- */
+.join-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 850px) {
+  .join-grid {
+    grid-template-columns: 1.6fr 1fr;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+  }
+
+  #nav-menu li a {
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+
+  #nav-menu li a:hover {
+    color: var(--accent-color);
+  }
+}
+
+/* --- FORM & CARDS --- */
+.form-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.wf1 fieldset {
+  border: none;
+  padding: 0;
+}
+
+.wf1 label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.wf1 input,
+.wf1 select,
+.wf1 textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.wf1 input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.m-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- THANK YOU PAGE --- */
+.results-display {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.result-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
