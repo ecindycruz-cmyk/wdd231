@@ -13,6 +13,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
+  <meta property="og:title" content="Join Form - Chamber of Commerce SV">
+  <meta property="og:description" content="Explore our network of partner companies in El Salvador.">
+  <meta property="og:image" content="https://tu-repo.github.io/chamber/images/logo.svg">
+  <meta property="og:url" content="https://tu-repo.github.io/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico">
+
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/join.css">
   <script src="scripts/join.js" defer></script>
@@ -43,16 +51,33 @@
         <h2>Membership Application</h2>
         <form method="get" action="thankyou.html" class="wf1">
           <fieldset>
-            <label>First Name * <input type="text" name="fname" required autocomplete="given-name"></label>
-            <label>Last Name * <input type="text" name="lname" required autocomplete="family-name"></label>
-            <label>Organizational Title <input type="text" name="org-title" pattern="[A-Za-z\s-]{7,}" required
-                placeholder="e.g., Community Outreach Lead"></label>
-            <label>Email * <input type="email" name="email" required placeholder="name@example.com"></label>
-            <label>Mobile Phone * <input type="tel" name="phone" required></label>
-            <label>Business / Org Name * <input type="text" name="organization" required></label>
+            <label>First Name * <input type="text" name="fname" required autocomplete="given-name"
+                title="Please enter your first name.">
+            </label>
+
+            <label>Last Name * <input type="text" name="lname" required autocomplete="family-name"
+                title="Please enter your last name.">
+            </label>
+
+            <label>Organizational Title
+              <input type="text" name="org-title" pattern="[A-Za-z\s-]{7,}" required autocomplete="organization-title"
+                title="Enter your title within the organization (minimum 7 characters).">
+            </label>
+
+            <label>Email * <input type="email" name="email" required placeholder="name@example.com" autocomplete="email"
+                title="Please enter a valid email address.">
+            </label>
+
+            <label>Mobile Phone * <input type="tel" name="phone" required autocomplete="tel"
+                title="Please enter your mobile phone number.">
+            </label>
+
+            <label>Business / Organization Name * <input type="text" name="organization" required
+                autocomplete="organization" title="Please enter the full name of your organization.">
+            </label>
 
             <label>Membership Level *
-              <select name="membership" required>
+              <select name="membership" required title="Select your membership level.">
                 <option value="" selected disabled>Select a level</option>
                 <option value="np">NP Membership</option>
                 <option value="bronze">Bronze Membership</option>
@@ -60,7 +85,12 @@
                 <option value="gold">Gold Membership</option>
               </select>
             </label>
-            <label>Description <textarea name="description"></textarea></label>
+
+            <label>Business / Organization Description
+              <textarea name="description" placeholder="What does your organization do?"
+                title="Briefly describe your business or organization."></textarea>
+            </label>
+
             <input type="hidden" name="timestamp" id="timestamp">
             <input type="submit" value="Submit Application">
           </fieldset>

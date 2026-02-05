@@ -94,6 +94,10 @@ h1 {
   color: black;
 }
 
+#nav-menu li a:hover {
+    color: var(--accent-color);
+  }
+
 /* --- GRID --- */
 .join-grid {
   display: grid;

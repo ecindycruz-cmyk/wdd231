@@ -1,42 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- MENU ---
-    const menuBtn = document.querySelector('#menu-btn');
-    const navMenu = document.querySelector('#nav-menu');
+    // 1. Manejo de Modales (Sin usar onclick en el HTML)
+    const openButtons = document.querySelectorAll('.open-modal-btn');
+    const closeButtons = document.querySelectorAll('.close-modal-btn');
 
-    if (menuBtn) {
+    openButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) modal.showModal();
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.closest('dialog').close();
+        });
+    });
+
+    const timestampInput = document.getElementById('timestamp');
+    if (timestampInput) {
+        timestampInput.value = new Date().toISOString();
+    }
+
+
+    const menuBtn = document.getElementById('menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+    if (menuBtn && navMenu) {
         menuBtn.addEventListener('click', () => {
-            const isShowing = navMenu.classList.toggle('show');
-            menuBtn.innerHTML = isShowing ? '&times;' : '≡';
+            navMenu.classList.toggle('show');
+            menuBtn.textContent = navMenu.classList.contains('show') ? '✕' : '≡';
         });
     }
 
-    // --- ACTIVE LINK ---
-    const currentPath = window.location.pathname.split("/").pop();
-    document.querySelectorAll('#nav-menu a').forEach(link => {
-        if (link.getAttribute('href') === currentPath || (currentPath === "" && link.getAttribute('href') === "index.html")) {
-            link.classList.add('active');
-        }
-    });
-
-    // --- TIMESTAMP ---
-    const timestampInput = document.getElementById('timestamp');
-    if (timestampInput) {
-        timestampInput.value = new Date().toLocaleString();
-    }
-
-    // --- FOOTER DATES ---
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-    const lastMod = document.getElementById('lastModified');
-    if (lastMod) lastMod.textContent = document.lastModified;
+    // 4. Footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
 });
-
-// --- MODAL ---
-function openModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) {
-        modal.showModal();
-    }
-}
 
