@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Manejo de Modales (Sin usar onclick en el HTML)
+    // 1. Manejo de Modales
     const openButtons = document.querySelectorAll('.open-modal-btn');
     const closeButtons = document.querySelectorAll('.close-modal-btn');
 
@@ -13,16 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
-            button.closest('dialog').close();
+            const modal = button.closest('dialog');
+            if (modal) modal.close();
         });
     });
 
+    // 2. Timestamp
     const timestampInput = document.getElementById('timestamp');
     if (timestampInput) {
         timestampInput.value = new Date().toISOString();
     }
 
-
+    // 3. Menú Móvil
     const menuBtn = document.getElementById('menu-btn');
     const navMenu = document.getElementById('nav-menu');
     if (menuBtn && navMenu) {
@@ -32,8 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
+    // 4. Footer info
+    const yearSpan = document.getElementById('year');
+    const lastModSpan = document.getElementById('lastModified');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    if (lastModSpan) lastModSpan.textContent = document.lastModified;
 });
-

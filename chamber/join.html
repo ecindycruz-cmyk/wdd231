@@ -44,40 +44,21 @@
       </nav>
     </div>
   </header>
-
-  <main>
+<main>
     <div class="join-grid">
       <section class="form-container">
         <h2>Membership Application</h2>
         <form method="get" action="thankyou.html" class="wf1">
           <fieldset>
-            <label>First Name * <input type="text" name="fname" required autocomplete="given-name"
-                title="Please enter your first name.">
-            </label>
-
-            <label>Last Name * <input type="text" name="lname" required autocomplete="family-name"
-                title="Please enter your last name.">
-            </label>
-
-            <label>Organizational Title
-              <input type="text" name="org-title" pattern="[A-Za-z\s-]{7,}" required autocomplete="organization-title"
-                title="Enter your title within the organization (minimum 7 characters).">
-            </label>
-
-            <label>Email * <input type="email" name="email" required placeholder="name@example.com" autocomplete="email"
-                title="Please enter a valid email address.">
-            </label>
-
-            <label>Mobile Phone * <input type="tel" name="phone" required autocomplete="tel"
-                title="Please enter your mobile phone number.">
-            </label>
-
-            <label>Business / Organization Name * <input type="text" name="organization" required
-                autocomplete="organization" title="Please enter the full name of your organization.">
-            </label>
+            <label>First Name * <input type="text" name="fname" required autocomplete="given-name"></label>
+            <label>Last Name * <input type="text" name="lname" required autocomplete="family-name"></label>
+            <label>Organizational Title <input type="text" name="org-title" pattern="[A-Za-z\s-]{7,}" required title="Minimum 7 characters."></label>
+            <label>Email * <input type="email" name="email" required placeholder="name@example.com"></label>
+            <label>Mobile Phone * <input type="tel" name="phone" required></label>
+            <label>Business / Organization Name * <input type="text" name="organization" required></label>
 
             <label>Membership Level *
-              <select name="membership" required title="Select your membership level.">
+              <select name="membership" required>
                 <option value="" selected disabled>Select a level</option>
                 <option value="np">NP Membership</option>
                 <option value="bronze">Bronze Membership</option>
@@ -86,13 +67,12 @@
               </select>
             </label>
 
-            <label>Business / Organization Description
-              <textarea name="description" placeholder="What does your organization do?"
-                title="Briefly describe your business or organization."></textarea>
+            <label>Business Description
+              <textarea name="description" placeholder="What does your organization do?"></textarea>
             </label>
 
             <input type="hidden" name="timestamp" id="timestamp">
-            <input type="submit" value="Submit Application">
+            <input type="submit" value="Submit Application" class="btn-submit">
           </fieldset>
         </form>
       </section>
@@ -102,22 +82,22 @@
         <div class="m-card" id="card-np">
           <h3>NP Membership</h3>
           <p>For non-profit organizations. No fee.</p>
-          <button type="button" onclick="openModal('modal-np')">View benefits</button>
+          <button type="button" class="open-modal-btn btn" data-modal="modal-np">View benefits</button>
         </div>
         <div class="m-card" id="card-bronze">
           <h3>Bronze Membership</h3>
           <p>Entry-level business support.</p>
-          <button type="button" onclick="openModal('modal-bronze')">View benefits</button>
+          <button type="button" class="open-modal-btn btn" data-modal="modal-bronze">View benefits</button>
         </div>
         <div class="m-card" id="card-silver">
           <h3>Silver Membership</h3>
           <p>More visibility and discounts.</p>
-          <button type="button" onclick="openModal('modal-silver')">View benefits</button>
+          <button type="button" class="open-modal-btn btn" data-modal="modal-silver">View benefits</button>
         </div>
         <div class="m-card" id="card-gold">
           <h3>Gold Membership</h3>
           <p>Maximum promotion and perks.</p>
-          <button type="button" onclick="openModal('modal-gold')">View benefits</button>
+          <button type="button" class="open-modal-btn btn" data-modal="modal-gold">View benefits</button>
         </div>
       </aside>
     </div>
@@ -126,22 +106,22 @@
   <dialog id="modal-np">
     <h3>NP Benefits</h3>
     <p>Specifically for non-profits. $0 fee.</p>
-    <button onclick="this.closest('dialog').close()" class="close-modal">Close</button>
+    <button class="close-modal-btn btn">Close</button>
   </dialog>
   <dialog id="modal-bronze">
     <h3>Bronze Benefits</h3>
     <p>Support for startups. Training included.</p>
-    <button onclick="this.closest('dialog').close()" class="close-modal">Close</button>
+    <button class="close-modal-btn btn">Close</button>
   </dialog>
   <dialog id="modal-silver">
     <h3>Silver Benefits</h3>
     <p>Includes event discounts and social media spots.</p>
-    <button onclick="this.closest('dialog').close()" class="close-modal">Close</button>
+    <button class="close-modal-btn btn">Close</button>
   </dialog>
   <dialog id="modal-gold">
     <h3>Gold Benefits</h3>
     <p>Full VIP access and spotlight directory placement.</p>
-    <button onclick="this.closest('dialog').close()" class="close-modal">Close</button>
+    <button class="close-modal-btn btn">Close</button>
   </dialog>
 
   <footer>
