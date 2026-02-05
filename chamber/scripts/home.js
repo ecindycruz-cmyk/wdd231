@@ -1,96 +1,106 @@
-const weatherInfo = document.querySelector('#weather-info');
-const forecastContainer = document.querySelector('#forecast');
-const memberURL = 'data/members.json';
-
 const lat = "13.6929";
 const lon = "-89.2182";
 const apiKey = "1563a5bfdde7e03d75e0de1f11eddc49";
-const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+const memberURL = 'data/members.json';
 
-async function apiFetch() {
+const menuBtn = document.querySelector('#menu-btn');
+const navMenu = document.querySelector('#nav-menu');
+
+// --- MENU HAMBURGUESA ---
+menuBtn.addEventListener('click', () => {
+    const isShowing = navMenu.classList.toggle('show');
+    menuBtn.innerHTML = isShowing ? '&times;' : '&#9776;';
+});
+
+const currentPath = window.location.pathname.split("/").pop();
+document.querySelectorAll('#nav-menu a').forEach(link => {
+    if (link.getAttribute('href') === currentPath || (currentPath === "" && link.getAttribute('href') === "index.html")) {
+        link.classList.add('active');
+    }
+});
+
+// --- FETCH WEATHER ---
+// --- FETCH WEATHER ---
+async function fetchWeather() {
     try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            displayResults(data); 
-        } else {
-            throw Error(await response.text());
-        }
-    } catch (error) {
-        console.error("Weather error:", error);
+        const response = await fetch(weatherUrl);
+        const data = await response.json();
+        
+        const current = data.list[0];
+        const weatherInfo = document.querySelector('#weather-info');
+        
+        const currentIcon = `https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`;
+        const currentDesc = current.weather[0].description;
+
+        weatherInfo.innerHTML = `
+            <div class="weather-flex">
+                <img src="${currentIcon}" alt="${currentDesc}" width="100" height="100">
+                <div>
+                    <p style="font-size: 1.5rem; font-weight: bold; margin: 0;">${current.main.temp.toFixed(0)}&deg;F</p>
+                    <p style="margin: 0; text-transform: capitalize;">${currentDesc}</p>
+                </div>
+            </div>
+        `;
+
+        // --- Forecast 3 days ---
+        const forecastContainer = document.querySelector('#forecast');
+    
+        const daily = data.list.filter(x => x.dt_txt.includes("12:00:00")).slice(0, 3);
+        
+        forecastContainer.innerHTML = "";
+        daily.forEach(day => {
+            const date = new Date(day.dt_txt).toLocaleDateString('en-US', {weekday: 'long'});
+            const iconCode = day.weather[0].icon;
+            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+            const temp = day.main.temp.toFixed(0);
+
+            forecastContainer.innerHTML += `
+                <div class="forecast-day" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #eee; padding: 5px 0;">
+                    <span>${date}</span>
+                    <div style="display: flex; align-items: center;">
+                        <img src="${iconUrl}" alt="${day.weather[0].description}">
+                        <span style="font-weight: bold; width: 40px; text-align: right;">${temp}&deg;F</span>
+                    </div>
+                </div>
+            `;
+        });
+    } catch (e) { 
+        console.error("Weather error", e); 
+        document.querySelector('#weather-info').innerHTML = "<p>Weather data unavailable</p>";
     }
 }
-
-function displayResults(data) {
-    // Clima Actual
-    const current = data.list[0];
-    const iconsrc = `https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`;
-    const desc = current.weather[0].description;
-
-    weatherInfo.innerHTML = `
-        <div class="weather-details">
-            <img src="${iconsrc}" alt="${desc}">
-            <div class="weather-data">
-                <span class="temp-main">${current.main.temp.toFixed(0)}&deg;F</span>
-                <span class="desc-cap">${desc.toUpperCase()}</span>
-                <span>Humidity: ${current.main.humidity}%</span>
-            </div>
-        </div>
-    `;
-
-    // Pronóstic 3 days
-    const dailyForecast = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
-    
-    forecastContainer.innerHTML = ""; 
-    dailyForecast.forEach(day => {
-        const date = new Date(day.dt_txt);
-        const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
-        forecastContainer.innerHTML += `<p><strong>${dayName}:</strong> ${day.main.temp.toFixed(0)}&deg;F</p>`;
-    });
-}
-
+// --- FETCH SPOTLIGHTS ---
 async function fetchSpotlights() {
     try {
         const response = await fetch(memberURL);
         const data = await response.json();
         
-        // Level 2 (Silver) or 3 (Gold)
+        // Filtrar Gold (3) y Silver (2)
         const eligible = data.members.filter(m => m.membershipLevel >= 2);
+        
         const shuffled = eligible.sort(() => 0.5 - Math.random()).slice(0, 3);
         
         const container = document.querySelector('.spotlight-cards');
-        container.innerHTML = ""; 
-
-        shuffled.forEach(member => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.innerHTML = `
-                <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
-                <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank">Website</a>
-                <p class="level">${member.membershipLevel === 3 ? 'Gold Member' : 'Silver Member'}</p>
+        container.innerHTML = "";
+        
+        shuffled.forEach(m => {
+            container.innerHTML += `
+                <div class="spotlight-card">
+                    <img src="images/${m.image}" alt="${m.name} logo">
+                    <h3>${m.name}</h3>
+                    <p>${m.address}</p>
+                    <p>${m.phone}</p>
+                    <p><a href="${m.website}" target="_blank">Website</a></p>
+                    <p><strong>Level: ${m.membershipLevel === 3 ? 'Gold' : 'Silver'}</strong></p>
+                </div>
             `;
-            container.appendChild(card);
         });
-    } catch (error) {
-        console.error("Spotlight error:", error);
-    }
+    } catch (e) { console.error("Spotlight error", e); }
 }
 
-// Menu Móvil 
-const menuBtn = document.querySelector('#menu-btn');
-const navMenu = document.querySelector('#nav-menu');
 
-menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-    menuBtn.textContent = navMenu.classList.contains('show') ? 'X' : '≡';
-});
-
-// Footer
+fetchWeather();
+fetchSpotlights();
 document.querySelector('#year').textContent = new Date().getFullYear();
 document.querySelector('#lastModified').textContent = document.lastModified;
-
-apiFetch();
-fetchSpotlights();
