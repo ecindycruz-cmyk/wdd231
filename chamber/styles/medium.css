@@ -1,13 +1,13 @@
 /* --- TABLET & DESKTOP NAV --- */
 @media (min-width: 641px) {
     #menu-btn {
-        display: none; /* Escondemos el botón de hamburguesa */
+        display: none; 
     }
 
     #nav-menu {
-        display: flex !important; /* Siempre visible */
-        position: static; /* Vuelve a su lugar en el flujo normal */
-        flex-direction: row; /* Horizontal */
+        display: flex !important;
+        position: static; 
+        flex-direction: row; 
         width: auto;
         background: none;
         box-shadow: none;
@@ -32,14 +32,14 @@
 
 /* Medium Screens Layout */
 #discover-grid {
-    grid-template-columns: 1fr 1fr; /* Dos columnas en tablet */
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "area1 area2"
         "area3 area4"
         "area5 area6"
         "area7 area8";
 }
-/* Hover effects start here (optional for tablet) */
+/* Hover effects  */
 .item-card img:hover {
     filter: brightness(0.9);
 }
