@@ -1,0 +1,45 @@
+/* --- TABLET & DESKTOP NAV --- */
+@media (min-width: 641px) {
+    #menu-btn {
+        display: none; /* Escondemos el botón de hamburguesa */
+    }
+
+    #nav-menu {
+        display: flex !important; /* Siempre visible */
+        position: static; /* Vuelve a su lugar en el flujo normal */
+        flex-direction: row; /* Horizontal */
+        width: auto;
+        background: none;
+        box-shadow: none;
+    }
+
+    #nav-menu li a {
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+        border-radius: 4px;
+        margin-left: 0.5rem;
+    }
+
+    #nav-menu li a:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Medium Screens Layout */
+#discover-grid {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en tablet */
+    grid-template-areas: 
+        "area1 area2"
+        "area3 area4"
+        "area5 area6"
+        "area7 area8";
+}
+/* Hover effects start here (optional for tablet) */
+.item-card img:hover {
+    filter: brightness(0.9);
+}

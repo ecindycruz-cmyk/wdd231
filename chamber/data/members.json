@@ -3,6 +3,7 @@
     {
       "name": "Super Selectos",
       "address": "Calle El Jabalí, San Salvador",
+      "description": "The country's leading food retailer with a nationwide presence.",
       "phone": "+503 2267-3333",
       "website": "https://www.superselectos.com",
       "image": "selectos.webp",
@@ -12,6 +13,7 @@
     {
       "name": "La Constancia",
       "address": "Paseo Gral. Escalón, San Salvador",
+      "description": "A leading beverage company with a long-standing national tradition.",
       "phone": "+503 2209-2000",
       "website": "https://www.laconstancia.com",
       "image": "constancia.webp",
@@ -21,6 +23,7 @@
     {
       "name": "Tigo El Salvador",
       "address": "Vía del Corso, Tuscania",
+      "description": "Constant innovation in telecommunications and data services.",
       "phone": "+503 2508-0000",
       "website": "https://www.tigo.com.sv",
       "image": "tigo.webp",
@@ -30,6 +33,7 @@
     {
       "name": "Banco Agrícola",
       "address": "85 Av. Sur, San Salvador",
+      "description": "The largest and most solid financial institution in the country.",
       "phone": "+503 2210-0000",
       "website": "https://www.bancoagricola.com",
       "image": "agricola.webp",
@@ -39,6 +43,7 @@
     {
       "name": "Avianca",
       "address": "Centro de Gobierno, San Salvador",
+      "description": "Connecting El Salvador to the world through its regional hub.",
       "phone": "+503 2267-0222",
       "website": "https://www.avianca.com",
       "image": "avianca.webp",
@@ -48,6 +53,7 @@
     {
       "name": "Termoencogibles",
       "address": "Antiguo Cuscatlán",
+      "description": "Regional benchmark in sustainable packaging solutions.",
       "phone": "+503 2212-7700",
       "website": "https://www.termo.com.sv",
       "image": "termo.webp",
@@ -57,11 +63,18 @@
     {
       "name": "Pupusería El Abuelo",
       "address": "Olocuilta, La Paz",
+      "description": "Traditional Salvadoran flavor in the rice pupusa capital.",
       "phone": "+503 2330-1122",
       "website": "https://facebook.com/elabuelo",
       "image": "abuelo.webp",
       "membershipLevel": 1,
       "other": "Comida tradicional salvadoreña."
-    }
+    },
+    {
+    "name": "Diagnostic Hospital",
+    "address": "Colonia Médica, San Salvador",
+    "description": "Leader in high-tech medical services and specialized care.",
+    "image": "images/hospital.webp"
+  }
   ]
 }

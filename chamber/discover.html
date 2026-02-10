@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover | Chamber of Commerce</title>
+  <meta name="description"
+    content="Official Discover Chamber of Commerce members. Find the best companies in El Salvador.">
+  <meta name="author" content="Cindy Cruz">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <meta property="og:title" content="Join Form - Chamber of Commerce SV">
+  <meta property="og:description" content="Explore our network of partner companies in El Salvador.">
+  <meta property="og:image" content="https://tu-repo.github.io/chamber/images/logo.svg">
+  <meta property="og:url" content="https://tu-repo.github.io/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico">
+
+
+  <head>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1025px)">
+
+    <script src="scripts/discover.js" type="module" defer></script>
+  </head>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="Zakura Chamber Logo" width="50" height="50">
+      </div>
+      <h1>Discover Chamber</h1>
+      <nav>
+        <button id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">&#9776;</button>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-discover">
+      <h1>Discover Our Region</h1>
+      <p>Meet the leaders driving the economy and the key points of interest in our area.</p>
+    </section>
+
+    <div id="visitor-message" class="visitor-message"></div>
+
+    <section id="discover-grid" class="grid-container"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Cindy Cruz | WDD 231</p>
+    <p>San Salvador | Last modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+
+</html>

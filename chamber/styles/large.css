@@ -1,0 +1,22 @@
+
+/* Large Screens Layout */
+#discover-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en desktop */
+    grid-template-areas: 
+        "area1 area2 area3"
+        "area4 area5 area6"
+        "area7 area8 ."; /* El punto es un espacio vacío */
+}
+/* Hover effects specifically for desktop */
+.item-card img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.item-card img:hover {
+    transform: scale(1.05);
+    filter: contrast(1.1);
+}
+
+.item-card {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
