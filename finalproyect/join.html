@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us | Maybecr Expedition</title>
+  <meta name="description" content="Join Maybecr Expedition and discover El Salvador.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <meta property="og:title" content="Join-Page - Maybecr Expedition SV">
+  <meta property="og:description" content="Explore our network of places in El Salvador.">
+  <meta property="og:image" content="https://tu-repo.github.io/finalproyect/images/coatepeque.webp">
+  <meta property="og:url" content="https://tu-repo.github.io/finalproject/join.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/join.css">
+
+  <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <img src="images/leaves.svg" alt="Site Logo" width="50" height="50">
+      MAYBECR EXPEDITION
+    </div>
+    <button id="menuBtn" aria-label="Toggle Menu">☰</button>
+    <nav>
+      <ul id="primaryNav">
+        <li><a href="index.html" class="nav-btn">Home</a></li>
+        <li><a href="directory.html" class="nav-btn">Directory</a></li>
+        <li><a href="join.html" class="nav-btn active">Join Us</a></li>
+        <li><a href="contact.html" class="nav-btn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="join-container container">
+      <h1 class="section-title">Become a Member</h1>
+
+      <div class="join-grid">
+        <form method="get" action="thankyou.html" class="join-form">
+          <label>First Name <input type="text" name="fname" required></label>
+          <label>Last Name <input type="text" name="lname" required></label>
+          <label>Organization Title <input type="text" name="title" pattern="[A-Za-z\s-]{1,}"></label>
+          <label>Email <input type="email" name="email" required placeholder="example@domain.com"></label>
+          <label>Mobile Phone <input type="tel" name="phone" required></label>
+          <label>Organization Name <input type="text" name="orgname" required></label>
+
+          <label>Membership Level
+            <select name="membership" required>
+              <option value="" disabled selected>Select a level...</option>
+              <option value="nonprofit">NP Membership (Free)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>Business Description
+            <textarea name="description" rows="4"></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp">
+          <input type="submit" value="Complete Registration" class="cta-button">
+        </form>
+
+        <aside class="membership-info">
+          <h2>Membership Benefits</h2>
+          <div class="card">
+            <table class="benefits-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>NP</th>
+                  <th>B</th>
+                  <th>S</th>
+                  <th>G</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Directory Listing</td>
+                  <td>✅</td>
+                  <td>✅</td>
+                  <td>✅</td>
+                  <td>✅</td>
+                </tr>
+                <tr>
+                  <td>Event Discounts</td>
+                  <td>❌</td>
+                  <td>✅</td>
+                  <td>✅</td>
+                  <td>✅</td>
+                </tr>
+                <tr>
+                  <td>Spotlight</td>
+                  <td>❌</td>
+                  <td>❌</td>
+                  <td>✅</td>
+                  <td>✅</td>
+                </tr>
+                <tr>
+                  <td>Training</td>
+                  <td>❌</td>
+                  <td>❌</td>
+                  <td>❌</td>
+                  <td>✅</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> | Maybecr Expedition | Cindy Cruz | El Salvador</p>
+      <p>Last Modified: <span id="lastMod"></span></p>
+      <p>Last visit: <span id="visitCount"></span></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

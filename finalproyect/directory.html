@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover | Maybecr Expedition</title>
+  <meta name="description" content="Explore our directory of 18 authentic destinations in El Salvador.">
+  <meta name="author" content="Cindy Cruz">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <meta property="og:title" content="Directory-Page - Maybecr Expedition SV">
+  <meta property="og:description" content="Explore our network of places in El Salvador.">
+  <meta property="og:image" content="https://tu-repo.github.io/finalproyect/images/coatepeque.webp">
+  <meta property="og:url" content="https://tu-repo.github.io/finalproject/directory.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/directory.css">
+
+  <script type="module" src="scripts/directory.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon"></div>
+      <img src="images/leaves.svg" alt="Site Logo" width="50" height="50">
+      MAYBECR EXPEDITION
+    </div>
+    <button id="menuBtn" aria-label="Open Menu">☰</button>
+    <nav>
+      <ul id="primaryNav">
+        <li><a href="index.html" class="nav-btn">Home</a></li>
+        <li><a href="directory.html" class="nav-btn active">Directory</a></li>
+        <li><a href="join.html" class="nav-btn">Join Us</a></li>
+        <li><a href="contact.html" class="nav-btn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="directory-intro">
+      <h1 class="section-title">Explore Our Treasures</h1>
+      <p>From volcanic lagoons to ancient Mayan cities, discover the heart of El Salvador.</p>
+    </section>
+
+    <div class="directory-controls">
+      <button id="gridView" class="view-btn active">Grid View</button>
+      <button id="listView" class="view-btn">List View</button>
+    </div>
+
+    <div id="directory-grid" class="grid">
+      <p class="loading">Loading our amazing destinations...</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Maybecr Expedition | Cindy Cruz | El Salvador</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

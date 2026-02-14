@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Maybecr Expedition</title>
+  <meta name="description" content="Explore El Salvador's hidden treasures and local communities.">
+  <meta name="author" content="Cindy Cruz">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <meta property="og:title" content="Contact-Page - Maybecr Expedition SV">
+  <meta property="og:description" content="Explore our network of places in El Salvador.">
+  <meta property="og:image" content="https://tu-repo.github.io/finalproyect/images/coatepeque.webp">
+  <meta property="og:url" content="https://tu-repo.github.io/finalproject/contact.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/contact.css">
+
+  <script type="module" src="scripts/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logo-icon"></div>
+        <img src="images/leaves.svg" alt="Site Logo" width="50" height="50">
+        MAYBECR EXPEDITION
+      </div>
+      <button id="menuBtn" aria-label="Toggle Menu">☰</button>
+      <nav>
+        <ul id="primaryNav">
+          <li><a href="index.html" class="nav-btn">Home</a></li>
+          <li><a href="directory.html" class="nav-btn">Directory</a></li>
+          <li><a href="join.html" class="nav-btn">Join Us</a></li>
+          <li><a href="contact.html" class="nav-btn active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1 class="section-title">Get in Touch</h1>
+
+      <div class="contact-grid">
+        <section class="contact-info">
+          <div class="card">
+            <div class="card-content">
+              <h3>Contact Information</h3>
+              <p><i class="fas fa-map-marker-alt"></i> San Salvador, El Salvador</p>
+              <p><i class="fas fa-phone"></i> +503 2222-0000</p>
+              <p><i class="fas fa-envelope"></i> info@maybecr.com</p>
+
+              <hr>
+
+              <h3>Follow Our Expedition</h3>
+              <div class="social-links">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://whatsapp.com" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-container card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15494.464535451995!2d-89.63773735!3d13.8502391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62913e2f47051f%3A0x2f30005a4631309c!2sVolc%C3%A1n%20de%20Santa%20Ana!5e0!3m2!1sen!2ssv!4v1700000000000!5m2!1sen!2ssv"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </section>
+
+        <section class="contact-form-container">
+          <form action="thankyou.html" method="get" class="join-form contact-form">
+            <div class="form-item">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-item">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-item">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="tours">Tour Information</option>
+                <option value="membership">Membership Support</option>
+                <option value="business">Business Partnership</option>
+              </select>
+            </div>
+
+            <div class="form-item full-width">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; <span id="year"></span> | Maybecr Expedition | Cindy Cruz | El Salvador</p>
+        <p>Last Modified: <span id="lastMod"></span></p>
+        <p>Last visit: <span id="visitCount"></span></p>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

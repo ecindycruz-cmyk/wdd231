@@ -1,0 +1,132 @@
+.join-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 30px;
+    margin-top: 30px;
+    align-items: start;
+}
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.join-form input, 
+.join-form select, 
+.join-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+@media (max-width: 800px) {
+    .join-grid {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        gap: 20px;
+    }
+
+    .membership-info {
+        order: 2; /* Asegura que la tabla de beneficios quede debajo del formulario */
+        width: 100%;
+    }
+
+    .join-form {
+        width: 100%;
+        order: 1; /* El formulario va primero */
+    }
+    
+    /* Ajuste para que la tabla no se desborde horizontalmente */
+    .membership-info .card {
+        overflow-x: auto;
+    }
+}
+
+/* Table */
+.benefits-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.benefits-table th, 
+.benefits-table td {
+    padding: 12px 5px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+}
+
+.benefits-table th {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Validation Visual */
+.join-form input:required:valid { border-left: 6px solid #2e7d32; }
+.join-form input:required:invalid:not(:placeholder-shown) { border-left: 6px solid #d32f2f; }
+
+/* Responsive */
+@media (max-width: 767px) {
+    /* Esto evita que el contenido de la página Join se encime al menú */
+    header {
+        position: relative;
+        z-index: 1001;
+    }
+
+    #primaryNav {
+        position: absolute;
+        top: 100%; /* Se despliega justo debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
+        display: none;
+        flex-direction: column;
+        list-style: none; /* Quita los puntos negros */
+        padding: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    #primaryNav.open {
+        display: flex;
+    }
+    
+    /* Aseguramos que los enlaces ocupen todo el ancho y no "floten" */
+    #primaryNav li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    #primaryNav li a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: var(--primary);
+        width: 100%;
+    }
+
+    .nav-btn:hover {
+        color: var(--secondary) !important;
+        border-bottom: 2px solid var(--secondary);
+    }
+
+    .nav-btn.active {
+        background-color: var(--primary);
+        color: var(--white) !important;
+        border-radius: 5px;
+    }
+}

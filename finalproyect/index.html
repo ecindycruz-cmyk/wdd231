@@ -4,14 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Plan | Maybecr Expedition</title>
-  <meta name="description"
-    content="Official Site Plan of Maybecr Expedition. Find the best places to visit in El Salvador.">
+  <title>Home | Maybecr Expedition</title>
+  <meta name="description" content="Explore El Salvador's hidden treasures and local communities.">
   <meta name="author" content="Cindy Cruz">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles/finalproyect.css">
+
+  <meta property="og:title" content="Home-Page - Maybecr Expedition SV">
+  <meta property="og:description" content="Explore our network of places in El Salvador.">
+  <meta property="og:image" content="https://tu-repo.github.io/finalproyect/images/coatepeque.webp">
+  <meta property="og:url" content="https://tu-repo.github.io/finalproject/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/layout.css">
+
+  <script type="module" src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -19,112 +31,91 @@
   <header>
     <div class="logo">
       <div class="logo-icon"></div>
-      MAYBECR SITE PLAN
+      <img src="images/leaves.svg" alt="Site Logo" width="50" height="50">
+      MAYBECR EXPEDITION
     </div>
+    <button id="menuBtn" aria-label="Toggle Menu">☰</button>
     <nav>
-      <ul>
-        <li><a href="#home" class="nav-btn btn-1">Home</a></li>
-        <li><a href="#content" class="nav-btn btn-2">Content</a></li>
-        <li><a href="#branding" class="nav-btn btn-3">Discover</a></li>
-        <li><a href="#contactus" class="nav-btn btn-4">Contact Us</a></li>
+      <ul id="primaryNav">
+        <li><a href="index.html" class="nav-btn active">Home</a></li>
+        <li><a href="directory.html" class="nav-btn">Directory</a></li>
+        <li><a href="join.html" class="nav-btn">Join Us</a></li>
+        <li><a href="contact.html" class="nav-btn">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Maybecr Expedition</h1>
-      <p>Official Planning Document & Digital Strategy</p>
+      <picture>
+        <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+        <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+        <img src="images/hero-small.webp" alt="Volcano Santa Ana of San Salvador" width="1200" height="400">
+      </picture>
+      <div class="hero-text">
+        <h1>Hidden Treasures of El Salvador</h1>
+        <p>Authentic routes, local coffee, and ancient traditions.</p>
+        <a href="directory.html" class="cta-button">Explore Now</a>
+      </div>
     </section>
 
     <div class="container">
+      <h2 class="section-title">Expedition Dashboard</h2>
+      <div class="grid home-grid">
 
-      <h2 id="vision" class="section-title">Site Foundations</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="card-header" style="background-color: var(--primary);"></div>
-          <div class="card-content">
-            <h3>Site Name</h3>
-            <p><strong>Name:</strong> Maybecr Expedition</p>
-            <p>This name represents a personalized adventure platform focused on El Salvador's hidden treasures.
-              "Expedition" suggests exploration beyond common tourism.</p>
-          </div>
-        </div>
-
-        <div class="card">
+        <div class="card" id="weather-card">
           <div class="card-header" style="background-color: var(--secondary);"></div>
           <div class="card-content">
-            <h3>Site Purpose</h3>
-            <p>To highlight emerging destinations and small businesses, connecting travelers with local cooperatives and
-              craftsmen tourism benefits.</p>
+            <h3>Current Weather</h3>
+            <div id="weather-display">
+              <p>Loading weather data...</p>
+            </div>
           </div>
         </div>
 
         <div class="card">
           <div class="card-header" style="background-color: var(--accent);"></div>
           <div class="card-content">
-            <h3>User Scenarios</h3>
-            <ul>
-              <li>"Where can I find an authentic indigo workshop outside traditional zones?"</li>
-              <li>"Which culinary route is best to visit given today's weather?"</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <h2 id="branding" class="section-title">Branding & Style</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="card-header" style="background-color: #64748b;"></div>
-          <div class="card-content">
-            <h3>Typography</h3>
-            <p><strong>Headings:</strong> Montserrat (Bold)<br>Selected for its modern and adventurous character.</p>
-            <p><strong>Body:</strong> Open Sans (Regular)<br>Selected for high readability on all digital devices.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" style="background-color: var(--primary);"></div>
-          <div class="card-content">
-            <h3>Color Scheme</h3>
-            <p><span class="swatch" style="background: var(--primary);"></span> #558B2F (Primary Green)</p>
-            <p><span class="swatch" style="background: var(--secondary);"></span> #3F6699 (Secondary Seawater)</p>
-            <p><span class="swatch" style="background: var(--accent);"></span> #FF7043 (Accent Orange)</p>
-          </div>
-        </div>
-
-        <div id="wireframe" class="card">
-          <div class="card-header" style="background-color: var(--dark);"></div>
-          <div class="card-content">
-            <h3>Visual Wireframe</h3>
-            <p>A responsive layout featuring a hero section, followed by a grid of destination cards, and a footer with
-              entrepreneur contact info.</p>
-            <div
-              style="background: #eee; border: 1px dashed #ccc; text-align: center; padding: 10px; font-size: 0.7rem; margin-top: 10px;">
-              [NAV] / [HERO] / [CARDS GRID] / [FOOTER]
+            <h3>Upcoming Events</h3>
+            <div id="events-display">
             </div>
           </div>
         </div>
-      </div>
 
+        <div class="card">
+          <div class="card-header" style="background-color: var(--dark);"></div>
+          <div class="card-content">
+            <h3>2-Day Forecast</h3>
+            <div class="forecast-item">
+              <span class="day">Tomorrow:</span>
+              <span class="temp">29°C</span> <span class="icon">🌤️</span>
+            </div>
+            <div class="forecast-item">
+              <span class="day">Sunday:</span>
+              <span class="temp">30°C</span> <span class="icon">☀️</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </main>
 
+  <dialog id="welcomeModal">
+    <div class="modal-body">
+      <h2>Welcome Explorer!</h2>
+      <p>Ready to discover the best hidden spots in El Salvador?</p>
+      <button id="closeModal">Let's Go!</button>
+    </div>
+  </dialog>
+
   <footer>
     <div class="footer-content">
-      <div>
-        <h3 style="font-family: 'Montserrat'; margin-bottom: 10px;">Maybecr Expedition</h3>
-        <p style="opacity: 0.8;">Promoting sustainable local tourism and community growth.</p>
-      </div>
-      <div>
-        <p style="font-size: 0.9rem; opacity: 0.7;">&copy; 2026 Maybecr Expedition| <span id="currentyear"></span> Cindy
-          Cruz | El Salvador | All rights reserved.</p>
-        <p style="font-size: 0.9rem; opacity: 0.7;">Today is: <span id="today1"></span></p>
-        <p style="font-size: 0.9rem; opacity: 0.7;" id="lastModified">Last Modification: </p>
-      </div>
+      <p>&copy; <span id="year"></span> | Maybecr Expedition | Cindy Cruz | El Salvador</p>
+      <p>Last Modified: <span id="lastMod"></span></p>
+      <p>Last visit: <span id="visitCount"></span></p>
     </div>
   </footer>
-
 
 </body>
 

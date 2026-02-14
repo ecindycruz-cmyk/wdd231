@@ -1,0 +1,148 @@
+{
+  "destinations": [
+    {
+        "id": 1, 
+        "name": "Joyas de Cerén", 
+        "location": "La Libertad", 
+        "category": "History", 
+        "tags": "UNESCO Site",
+        "image": "images/joya-ceren.webp"
+    },
+    {
+        "id": 2, 
+        "name": "Ruta de las Flores", 
+        "location": "Ahuachapán", 
+        "category": "Nature", 
+        "tags": "Coffee",
+        "image": "images/ruta-flores.webp"
+    },
+    {
+        "id": 3, 
+        "name": "Suchitoto Town", 
+        "location": "Cuscatlán", 
+        "category": "Culture", 
+        "tags": "Colonial",
+        "image": "images/suchitoto.webp"
+    },
+    {
+        "id": 4, 
+        "name": "El Boquerón", 
+        "location": "San Salvador", 
+        "category": "Nature", 
+        "tags": "Volcano",
+        "image": "images/boqueron.webp"
+    },
+    {
+        "id": 5, 
+        "name": "Tamanique Falls", 
+        "location": "La Libertad", 
+        "category": "Adventure", 
+        "tags": "Hiking",
+        "image": "images/tamanique.webp"
+    },
+    {
+        "id": 6, 
+        "name": "Lake Coatepeque", 
+        "location": "Santa Ana", 
+        "category": "Nature", 
+        "tags": "Water Sports",
+        "image": "images/coatepeque.webp"
+    },
+    {
+        "id": 7, 
+        "name": "Ilobasco Pottery", 
+        "location": "Cabañas", 
+        "category": "Crafts", 
+        "tags": "Ceramics",
+        "image": "images/ilobasco.webp"
+    },
+    {
+        "id": 8, 
+        "name": "Puerto La Libertad", 
+        "location": "La Libertad", 
+        "category": "Food", 
+        "tags": "Seafood",
+        "image": "images/puerto.webp"
+    },
+    {
+        "id": 9, 
+        "name": "San Sebastián textiles", 
+        "location": "San Vicente", 
+        "category": "Crafts", 
+        "tags": "Indigo",
+        "image": "images/san-sebastian.webp"
+    },
+    {
+        "id": 10, 
+        "name": "Cerro Verde", 
+        "location": "Santa Ana", 
+        "category": "Nature", 
+        "tags": "Views",
+        "image": "images/cerro-verde.webp"
+    },
+    {
+        "id": 11, 
+        "name": "Ataco Murals", 
+        "location": "Ahuachapán", 
+        "category": "Culture", 
+        "tags": "Art",
+        "image": "images/ataco.webp"
+    },
+    {
+        "id": 12, 
+        "name": "Juayúa Food Festival", 
+        "location": "Sonsonate", 
+        "category": "Food", 
+        "tags": "Weekend",
+        "image": "images/juayua.webp"
+    },
+    {
+        "id": 13, 
+        "name": "Planes de Renderos", 
+        "location": "San Salvador", 
+        "category": "Food", 
+        "tags": "Pupusas",
+        "image": "images/planes.webp"
+    },
+    {
+        "id": 14, 
+        "name": "Perquín", 
+        "location": "Morazán", 
+        "category": "History", 
+        "tags": "Peace",
+        "image": "images/perquin.webp"
+    },
+    {
+        "id": 15, 
+        "name": "La Palma", 
+        "location": "Chalatenango", 
+        "category": "Art", 
+        "tags": "Llort Style",
+        "image": "images/la-palma.webp"
+    },
+    {
+        "id": 16, 
+        "name": "Monte Cristo", 
+        "location": "Metapán", 
+        "category": "Nature", 
+        "tags": "Cloud Forest",
+        "image": "images/montecristo.webp"
+    },
+    {
+        "id": 17, 
+        "name": "Golfo de Fonseca", 
+        "location": "La Unión", 
+        "category": "Adventure", 
+        "tags": "Islands",
+        "image": "images/golfo.webp"
+    },
+    {
+        "id": 18, 
+        "name": "Alegría Lagoon", 
+        "location": "Usulután", 
+        "category": "Nature", 
+        "tags": "Sulphur",
+        "image": "images/alegria.webp"
+    }
+  ]
+}
