@@ -1,64 +1,56 @@
-/* formulario */
-.join-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px; 
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-}
-
-/* item of formulario */
-.form-item {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.full-width, .cta-button {
-    grid-column: 1 / -1; 
-}
-
-.join-form input, 
-.join-form select, 
-.join-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: inherit;
-}
-
-/* mobile view*/
-@media (max-width: 600px) {
-    .join-form {
-        grid-template-columns: 1fr;
-    }
-}
 
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 30px;
-    margin-top: 20px;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: start;
 }
 
-.contact-info i {
-    color: var(--primary);
-    margin-right: 10px;
-    width: 20px;
+
+.contact-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100%;
 }
+
+
+.form-item {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    text-align: left;
+}
+
+.form-item label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.form-item input, 
+.form-item select, 
+.form-item textarea {
+    width: 100% !important;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
 
 .social-links {
     display: flex;
     gap: 20px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-top: 15px;
 }
 
 .social-links a {
     color: var(--secondary);
-    transition: transform 0.3s, color 0.3s;
+    transition: 0.3s;
 }
 
 .social-links a:hover {
@@ -66,15 +58,22 @@
     transform: translateY(-5px);
 }
 
-.map-container {
-    margin-top: 20px;
-    border-radius: 12px;
-    overflow: hidden;
+/* Botón adaptable */
+.contact-form .cta-button {
+    width: fit-content;
+    padding: 15px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
 }
 
-/* Responsivo to móviles */
-@media (max-width: 768px) {
+/* --- VISTA MÓVIL --- */
+@media (max-width: 800px) {
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .contact-form .cta-button {
+        width: 100% !important;
     }
 }
